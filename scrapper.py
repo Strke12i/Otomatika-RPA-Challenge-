@@ -4,6 +4,7 @@ from RPA.HTTP import HTTP
 from util import Utils
 import logging
 import uuid
+import os
 
 utils = Utils()
 logging.basicConfig(filename='./output/robot.log', level=logging.INFO)
@@ -234,7 +235,7 @@ class Scrapper:
             image_type = url.split('.')[-1]
             if image_type != 'jpeg' and image_type != 'jpg' and image_type != 'png' and image_type != 'gif' and image_type != 'webp':
                 image_type = 'png'
-            filename = "output/images/"+ uuid.uuid4().hex + '.' + image_type
+            filename = "images/"+ uuid.uuid4().hex + '.' + image_type
             self.http.download(url, filename)
             return filename
         except Exception as e:
@@ -245,6 +246,9 @@ class Scrapper:
         try:
             headers = ['title', 'description', 'date', 'image_filename', 'count_search_phrase', 'contains_money', 'filename']
             rows = {header: [] for header in headers}
+            if not os.path.exists('images'):
+                os.makedirs('images')
+            
             for news in self.news_list:
                 for header in headers[:-1]:
                     if header in news.keys():
