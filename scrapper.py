@@ -1,10 +1,10 @@
 from RPA.Browser.Selenium import Selenium
 from RPA.Excel.Files import Files
-from RPA.HTTP import HTTP
 from util import Utils
 import logging
 import uuid
 import os
+import requests
 
 
 utils = Utils()
@@ -21,7 +21,6 @@ class Scrapper:
         self.news_list = []
         self.browser = Selenium()
         self.excel = Files()
-        self.http = HTTP()
 
     def open_browser(self):
         self.browser.open_available_browser(self.url)
@@ -238,7 +237,14 @@ class Scrapper:
                 image_type = 'png'
             filename = "output/images/"+ uuid.uuid4().hex + '.' + image_type
             logging.info(f"Downloading image: {url}")
-            self.http.download(url, filename)
+        
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(filename, 'wb') as f:
+                    f.write(response.content)
+            else:
+                logging.warning(f"Can't download image: {url}")
+        
             return filename
         except Exception as e:
             logging.error(f"Error: {e}")
