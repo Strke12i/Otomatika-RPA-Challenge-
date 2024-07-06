@@ -253,9 +253,13 @@ class Scrapper:
             return ''
         
     def all_files(self):
-        files = glob.glob('./output/images/*')
-        wi = WorkItems()
-        wi.create_output_work_item(files=files, save=True)
+        try:
+            files = glob.glob('./output/images/*')
+            wi = WorkItems()
+            wi.get_input_work_item()
+            wi.create_output_work_item(files=files, save=True)
+        except Exception as e:
+            logging.error(f"Error: {e}")
         
     def save_on_excel(self):
         try:
