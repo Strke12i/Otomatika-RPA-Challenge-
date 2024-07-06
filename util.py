@@ -27,3 +27,5 @@ class Utils:
     
     def extract_num_pages(self, num_of_pages):
         return int(num_of_pages.split('of ')[1])
+    
+    

@@ -1,10 +1,12 @@
 from RPA.Browser.Selenium import Selenium
 from RPA.Excel.Files import Files
+from RPA.Robocorp.WorkItems import WorkItems
 from util import Utils
 import logging
 import uuid
 import os
 import requests
+import glob
 
 
 utils = Utils()
@@ -250,6 +252,11 @@ class Scrapper:
             logging.error(f"Error: {e}")
             return ''
         
+    def all_files(self):
+        files = glob.glob('./output/images/*')
+        wi = WorkItems()
+        wi.create_output_work_item(files=files, save=True)
+        
     def save_on_excel(self):
         try:
             headers = ['title', 'description', 'date', 'image_filename', 'count_search_phrase', 'contains_money', 'filename']
@@ -272,6 +279,7 @@ class Scrapper:
                     else:
                         rows[header].append('')
             
+            self.all_files()
             self.excel.create_workbook(path="./output/news.xlsx")
             self.excel.create_worksheet("news")
             self.excel.append_rows_to_worksheet(rows, header=True)
