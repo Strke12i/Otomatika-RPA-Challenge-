@@ -236,6 +236,7 @@ class Scrapper:
             if image_type != 'jpeg' and image_type != 'jpg' and image_type != 'png' and image_type != 'gif' and image_type != 'webp':
                 image_type = 'png'
             filename = "output/images/"+ uuid.uuid4().hex + '.' + image_type
+            logging.info(f"Downloading image: {url}")
             self.http.download(url, filename)
             return filename
         except Exception as e:
