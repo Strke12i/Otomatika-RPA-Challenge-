@@ -1,0 +1,10 @@
+[
+  {
+      "payload": {
+         "url": "https://www.latimes.com",
+          "search_phrase": "robot",
+          "topic": "California",
+          "period": 2
+      }
+  }
+]
