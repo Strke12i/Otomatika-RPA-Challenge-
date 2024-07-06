@@ -4,6 +4,7 @@ from RPA.HTTP import HTTP
 from util import Utils
 import logging
 import uuid
+import os
 
 
 utils = Utils()
@@ -247,6 +248,12 @@ class Scrapper:
         try:
             headers = ['title', 'description', 'date', 'image_filename', 'count_search_phrase', 'contains_money', 'filename']
             rows = {header: [] for header in headers}
+            
+            if os.path.exists('./output/images') == False:
+                logging.info("Creating output folder...")
+                os.makedirs('./output/images')
+            
+            logging.info("Saving news on excel...")
             
             for news in self.news_list:
                 for header in headers[:-1]:
