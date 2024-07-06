@@ -1,0 +1,38 @@
+INFO:root:Resolving input path: c:\Users\felip\OneDrive\Documentos\desafio\Otomatika-RPA-Challenge-\Otomatika\devdata\work-items-in\test\work-items.json
+INFO:RPA.core.webdriver:Downloaded webdriver to: C:\Users\felip\AppData\Local\robocorp\webdrivers\.wdm\drivers\chromedriver\win64\126.0.6478.126\chromedriver-win32/chromedriver.exe
+INFO:RPA.Browser.Selenium:Webdriver version taken into use: ChromeDriver 126.0.6478.126 (d36ace6122e0a59570e258d82441395206d60e1c-refs/branch-heads/6478@{#1591})
+
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser (version 126.0.6478) with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: Webdriver executable 'chromedriver' is not in PATH (with disabled Selenium Manager)
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://www.latimes.com'
+INFO:RobotFramework:Clicking button 'xpath://button[@data-element="search-button"]'.
+INFO:RobotFramework:Typing text 'robot' into text field 'xpath://input[@data-element="search-form-input"]'.
+INFO:RobotFramework:Clicking button 'xpath://button[@data-element="search-submit-button"]'.
+INFO:RobotFramework:Ran with keyword <b>Element Should Be Visible</b> which returned error: <i>Element with locator 'css:button.button filters-open-button' not found.</i>
+WARNING:root:Filter button not found
+INFO:RobotFramework:Clicking button 'xpath://button[@class="button see-all-button" and @data-toggle-trigger="see-all"]'.
+INFO:RobotFramework:Clicking element '<selenium.webdriver.remote.webelement.WebElement (session="de861315fc982142e8a66465e41c784e", element="f.4B0BFF1F63755658CB851E12FEE8C84C.d.C8AE1EFAF466826E7F4482827B0E0148.e.9734")>'.
+INFO:RobotFramework:Selecting options from selection list 'xpath://select[@class="select-input"]' by value 1.
+INFO:root:Getting news...
+INFO:root:Max pages: 10
+INFO:root:Loading news...
+INFO:root:Creating output folder...
+INFO:root:Saving news on excel...
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/5925ba5/2147483647/strip/true/crop/1611x1074+178+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F20%2F66%2F025fe5914a91a14bcd7e24dc8443%2Fla-me-bus-standoff.jpg
+INFO:RPA.HTTP:Creating a new HTTP session
+INFO:RobotFramework:Creating Session using : alias=rpasession_alias.httpsca-times.brightspotcdn.com, url=https://ca-times.brightspotcdn.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/1b09617/2147483647/strip/true/crop/3174x2116+108+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fcd%2F5a%2F6beca868465b87d5a4411a9f9667%2F3055713-me-dmv-kkn-4619-copy.jpg
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/3a6105f/2147483647/strip/true/crop/6000x4000+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fde%2F46%2F264c30a7432396c202dad269353a%2Fla-photos-1staff-836849-na-pol-0908-vp-oakland-newsom-recall-kkn-20366.JPG
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/380ebcc/2147483647/strip/true/crop/4800x3200+0+23/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F16%2Ff1%2Fd073c7fa44b689eaee4880918a69%2F1232594-me-lausd-acceleration-days006-ls.jpg
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/97a1ea5/2147483647/strip/true/crop/1850x1233+0+51/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F21%2F89%2F621616aa4611a13c8e8358f2ccc1%2Fla-na-san-francisco-house001.jpg
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/beb34c4/2147483647/strip/true/crop/1620x1080+150+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F3a%2Fe9%2Ff0475c1f4ef399e5524407104488%2Fsnw-mario-kart-ride-at-ush.jpg
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:root:Downloading image: https://ca-times.brightspotcdn.com/dims4/default/eef5181/2147483647/strip/true/crop/3052x2035+0+1/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F96%2Fee%2F11fb540a46bca6b0634420cf3889%2Fla-me-fsd-tesla-police-crash.JPG
+INFO:RPA.HTTP:Using already existing HTTP session
+INFO:RPA.Excel.Files:Closing workbook: <RPA.Excel.Files.XlsxWorkbook object at 0x000002015795B2B0>
